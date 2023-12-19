@@ -4,6 +4,8 @@ This is a simple template for the usage of Dobby with a Mod Menu written in Java
 
 ### Not For Noobs
 
+### Only for Armv7, Arm64 Coming Soon
+
 ### REQUIRED
 
 1. A Brain

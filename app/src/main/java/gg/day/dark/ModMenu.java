@@ -37,19 +37,18 @@ import android.widget.Toast;
 
 public class ModMenu {
 
-    private ModUtilities modUtilities;
     WindowManager windowManager;
     WindowManager.LayoutParams wParam;
     FrameLayout rootFrame;
     LinearLayout boxMenu;
     ScrollView scrollView;
     LinearLayout parentMod;
-
+    LinearLayout icon;
+    ImageView iconLauncher;
+    private ModUtilities modUtilities;
     private Context context;
     private int initialX, initialY;
     private float initialTouchX, initialTouchY;
-    LinearLayout icon;
-    ImageView iconLauncher;
 
     public void createMenu(Context context) {
         this.context = context;
