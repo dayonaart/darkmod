@@ -20,11 +20,11 @@ This is a simple template for the usage of Dobby with a Mod Menu written in Java
 This is how the menu looks like when you simply build and run it
 You can editing menu what you want here
 
-<img src='screenshot/mcode.png' width='600' alt="">
+<img src='screenshot/mcode.png' width='450' alt="">
 
 Register your mod menu here
 
-<img src='screenshot/register.png' width='600' alt="">
+<img src='screenshot/register.png' width='450' alt="">
 
 Test Game
 
@@ -37,14 +37,14 @@ Station Manager</a>
 
 1. decompile game apk
 
-   <img src='screenshot/apktool_d.png' width='300' alt="">
+   <img src='screenshot/apktool_d.png' width='250' alt="">
 
 2. edit game manifest
 
-   <img src='screenshot/edit_mani.png' width='600' alt="">
+   <img src='screenshot/edit_mani.png' width='450' alt="">
 3. embed mod to game smali
 
-   <img src='screenshot/add_start_smali.png' width='600' alt="">
+   <img src='screenshot/add_start_smali.png' width='450' alt="">
 
 ### Credits:
 
