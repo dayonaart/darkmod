@@ -14,7 +14,7 @@ You can editing menu what you want here
 Test from Kairosoft
 game https://happymod.com/station-manager-app-mod/net.kairosoft.android.densha_en/original-download.html
 
-<img src='screenshot/khack.gif' width='150' height="400" alt="">
+<img src='screenshot/khack.gif' width='150' height="300" alt="">
 
 ### Credits:
 
