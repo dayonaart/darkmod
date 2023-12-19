@@ -10,7 +10,7 @@ This is a simple template for the usage of Dobby with a Mod Menu written in Java
 2. Java Skill ( Intermediate )
 3. C++ Skill ( Intermediate )
 4. Smali Skill ( Basic )
-5. <a href="https://github.com/dayonaart/darkmod/tree/main/tools" title="Apktool">
+5. <a href="https://github.com/dayonaart/darkmod/blob/main/tools/apktool.jar" title="Apktool">
 6. <a href="https://github.com/dayonaart/darkmod/tree/main/tools" title="Il2CppDumper">
 
 ### Tutorial:
