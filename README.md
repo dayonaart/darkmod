@@ -9,12 +9,12 @@ This is a simple template for the usage of Dobby with a Mod Menu written in Java
 This is how the menu looks like when you simply build and run it
 You can editing menu what you want here
 
-<img src='screenshot/mcode.png' width='940' alt="">
+<img src='screenshot/mcode.png' width='600' alt="">
 
 Test from Kairosoft
 game https://happymod.com/station-manager-app-mod/net.kairosoft.android.densha_en/original-download.html
 
-<img src='screenshot/khack.gif' width='300' height="600" alt="">
+<img src='screenshot/khack.gif' width='150' height="400" alt="">
 
 ### Credits:
 
