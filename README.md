@@ -17,6 +17,9 @@ game https://happymod.com/station-manager-app-mod/net.kairosoft.android.densha_e
 <img src='screenshot/khack.gif' width='300' height="600" alt="">
 
 <credit>
+
 ### Credits:
+
 Thanks to Dobby https://github.com/jmpews/Dobby
+
 </credit>
