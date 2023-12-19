@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64/
+cmake_ninja_workdir = /home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86_64/
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target daydark
 
@@ -49,19 +49,19 @@ cmake_ninja_workdir = /home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debu
 
 build cmake_object_order_depends_target_daydark: phony || CMakeFiles/daydark.dir
 
-build CMakeFiles/daydark.dir/main.cpp.o: CXX_COMPILER__daydark_Debug /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/main.cpp || cmake_object_order_depends_target_daydark
+build CMakeFiles/daydark.dir/main.cpp.o: CXX_COMPILER__daydark_Debug /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/main.cpp || cmake_object_order_depends_target_daydark
   DEFINES = -Ddaydark_EXPORTS
   DEP_FILE = CMakeFiles/daydark.dir/main.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17
-  INCLUDES = -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Dobby/include
+  INCLUDES = -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Dobby/include
   OBJECT_DIR = CMakeFiles/daydark.dir
   OBJECT_FILE_DIR = CMakeFiles/daydark.dir
 
-build CMakeFiles/daydark.dir/Patching/Patch.cpp.o: CXX_COMPILER__daydark_Debug /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Patching/Patch.cpp || cmake_object_order_depends_target_daydark
+build CMakeFiles/daydark.dir/Patching/Patch.cpp.o: CXX_COMPILER__daydark_Debug /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Patching/Patch.cpp || cmake_object_order_depends_target_daydark
   DEFINES = -Ddaydark_EXPORTS
   DEP_FILE = CMakeFiles/daydark.dir/Patching/Patch.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17
-  INCLUDES = -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Dobby/include
+  INCLUDES = -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Dobby/include
   OBJECT_DIR = CMakeFiles/daydark.dir
   OBJECT_FILE_DIR = CMakeFiles/daydark.dir/Patching
 
@@ -71,18 +71,18 @@ build CMakeFiles/daydark.dir/Patching/Patch.cpp.o: CXX_COMPILER__daydark_Debug /
 
 
 #############################################
-# Link the shared library /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
+# Link the shared library /home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
 
-build /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so: CXX_SHARED_LIBRARY_LINKER__daydark_Debug CMakeFiles/daydark.dir/main.cpp.o CMakeFiles/daydark.dir/Patching/Patch.cpp.o | /home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/24/liblog.so /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Dobby/x86_64/libdobby.a
+build /home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so: CXX_SHARED_LIBRARY_LINKER__daydark_Debug CMakeFiles/daydark.dir/main.cpp.o CMakeFiles/daydark.dir/Patching/Patch.cpp.o | /home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/24/liblog.so /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Dobby/x86_64/libdobby.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info
   LINK_FLAGS = -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = /home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/24/liblog.so  /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Dobby/x86_64/libdobby.a  -latomic -lm
+  LINK_LIBRARIES = /home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/24/liblog.so  /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Dobby/x86_64/libdobby.a  -latomic -lm
   OBJECT_DIR = CMakeFiles/daydark.dir
   POST_BUILD = :
   PRE_LINK = :
   SONAME = libdaydark.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
+  TARGET_FILE = /home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
   TARGET_PDB = daydark.so.dbg
 
 
@@ -90,7 +90,7 @@ build /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/D
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64 && /home/dayona/Android/Sdk/cmake/3.22.1/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86_64 && /home/dayona/Android/Sdk/cmake/3.22.1/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -101,7 +101,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64 && /home/dayona/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp -B/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64
+  COMMAND = cd /home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86_64 && /home/dayona/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp -B/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86_64
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -111,9 +111,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build daydark: phony /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
+build daydark: phony /home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
 
-build libdaydark.so: phony /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
+build libdaydark.so: phony /home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
 
 # =============================================================================
 # Folder targets.
@@ -121,9 +121,9 @@ build libdaydark.so: phony /home/dayona/AndroidStudioProjects/androicpp/app/buil
 # =============================================================================
 
 #############################################
-# Folder: /home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64
+# Folder: /home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86_64
 
-build all: phony /home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
+build all: phony /home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so
 
 # =============================================================================
 # Built-in targets
@@ -132,14 +132,14 @@ build all: phony /home/dayona/AndroidStudioProjects/androicpp/app/build/intermed
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeASMCompiler.cmake.in /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeASMInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineASMCompiler.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestASMCompiler.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-FindBinUtils.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android-legacy.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/flags.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Clang.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Initialize.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/platforms.cmake /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8/CMakeASMCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeASMInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android-legacy.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/flags.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Clang.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Initialize.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/platforms.cmake /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8/CMakeASMCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeASMCompiler.cmake.in /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeASMInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineASMCompiler.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestASMCompiler.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-FindBinUtils.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android-legacy.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/flags.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Clang.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Initialize.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/platforms.cmake /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8/CMakeASMCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeSystem.cmake: phony
+build /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeASMInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-ASM.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake /home/dayona/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android-legacy.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/android.toolchain.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/flags.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Clang.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android-Initialize.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/hooks/pre/Android.cmake /home/dayona/Android/Sdk/ndk/25.1.8937393/build/cmake/platforms.cmake /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8/CMakeASMCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8/CMakeSystem.cmake: phony
 
 
 #############################################

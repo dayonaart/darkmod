@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/dayona/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp -B/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/arm64-v8a
+  command = /home/dayona/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp -B/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/arm64-v8a
   description = Re-running CMake...
   generator = 1
 

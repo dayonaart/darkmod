@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "androicpp"
+rootProject.name = "daydark"
 include ':app'

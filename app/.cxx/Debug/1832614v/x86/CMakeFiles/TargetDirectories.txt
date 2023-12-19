@@ -1,3 +1,3 @@
-/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86/CMakeFiles/daydark.dir
-/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86/CMakeFiles/edit_cache.dir
-/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86/CMakeFiles/rebuild_cache.dir
+/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86/CMakeFiles/daydark.dir
+/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86/CMakeFiles/edit_cache.dir
+/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86/CMakeFiles/rebuild_cache.dir

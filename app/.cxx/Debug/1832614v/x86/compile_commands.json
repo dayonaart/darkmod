@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86",
-  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Dobby/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17 -o CMakeFiles/daydark.dir/main.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/main.cpp",
-  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/main.cpp"
+  "directory": "/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Dobby/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17 -o CMakeFiles/daydark.dir/main.cpp.o -c /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/main.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/main.cpp"
 },
 {
-  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86",
-  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Dobby/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17 -o CMakeFiles/daydark.dir/Patching/Patch.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Patching/Patch.cpp",
-  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Patching/Patch.cpp"
+  "directory": "/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/x86",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp -I/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Dobby/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17 -o CMakeFiles/daydark.dir/Patching/Patch.cpp.o -c /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Patching/Patch.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp/Patching/Patch.cpp"
 }
 ]

@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp
+# Install script for directory: /home/dayona/AndroidStudioProjects/daydark/app/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dayona/AndroidStudioProjects/daydark/app/.cxx/Debug/1832614v/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

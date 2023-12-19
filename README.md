@@ -15,8 +15,10 @@ Register your mod menu here
 
 <img src='screenshot/register.png' width='600' alt="">
 
+Test Game
+
 <img src='screenshot/khack.gif' width='150' height="300" alt="">
-Test from Kairosoft
+Test from game Kairosoft
 <a href="https://happymod.com/station-manager-app-mod/net.kairosoft.android.densha_en/original-download.html" title="Station Manager">
 Station Manager</a>
 
