@@ -14,16 +14,23 @@
 
 package gg.day.dark;
 
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class ModUtilities {
 
-    private final Properties prop = new Properties();
     private final Context context;
 
     public ModUtilities(Context context) {
@@ -49,12 +56,71 @@ public class ModUtilities {
         sw.getThumbDrawable().setTintList(swState);
         sw.getTrackDrawable().setTintList(swState);
         sw.setText(modName);
+        sw.setTextColor(Color.WHITE);
         sw.setWidth(500);
-        sw.setTextSize(prop.TEXT_MODS_SIZE);
-        sw.setTextColor(prop.TEXT_COLOR_2);
+        sw.setTextSize(10);
         sw.setPadding(10, 5, 0, 5);
         sw.setOnCheckedChangeListener((buttonView, isChecked) -> callback.onClick(modName, index, isChecked));
         linearLayout.addView(sw);
+        return linearLayout;
+    }
+
+    public LinearLayout registerTextField(String modName, int index) {
+        LinearLayout linearLayout = new LinearLayout(context);
+        EditText editText = new EditText(context);
+        editText.setText(modName, TextView.BufferType.EDITABLE);
+        editText.setTextColor(Color.WHITE);
+        editText.setEnabled(true);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        linearLayout.addView(editText);
+        return linearLayout;
+    }
+
+    public LinearLayout registerSlider(String modName, int index) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
+        LinearLayout linearLayout = new LinearLayout(context);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.setLayoutParams(params);
+        linearLayout.setPadding(10, 5, 0, 5);
+        TextView textView = new TextView(context);
+        textView.setText(modName);
+        textView.setTextSize(10);
+        textView.setTextColor(Color.WHITE);
+        SeekBar seekBar = new SeekBar(context);
+        seekBar.setLayoutParams(params);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        linearLayout.addView(textView);
+        linearLayout.addView(seekBar);
         return linearLayout;
     }
 }

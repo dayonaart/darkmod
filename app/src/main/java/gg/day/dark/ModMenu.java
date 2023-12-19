@@ -43,6 +43,7 @@ public class ModMenu {
     FrameLayout rootFrame;
     LinearLayout boxMenu;
     ScrollView scrollView;
+    LinearLayout parentMod;
 
     private Context context;
     private int initialX, initialY;
@@ -60,7 +61,7 @@ public class ModMenu {
     @SuppressLint("WrongConstant")
     private WindowManager setWindowManager() {
         int iParams = Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O ? 2038 : 2002;
-        wParam = new WindowManager.LayoutParams(WRAP_CONTENT, WRAP_CONTENT, iParams, 8, -3);
+        wParam = new WindowManager.LayoutParams(WRAP_CONTENT, WRAP_CONTENT, iParams, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, -3);
         wParam.gravity = 51;
         wParam.x = 0;
         wParam.y = 100;
@@ -82,7 +83,7 @@ public class ModMenu {
         boxMenu = new LinearLayout(context);
         boxMenu.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
         boxMenu.setOrientation(LinearLayout.VERTICAL);
-        boxMenu.addView(scrollView);
+        boxMenu.addView(parentMod);
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -91,7 +92,7 @@ public class ModMenu {
             int m = motionEvent.getAction();
             switch (m) {
                 case MotionEvent.ACTION_UP:
-                    scrollView.setAlpha(1f);
+                    parentMod.setAlpha(1f);
                     int rawX = (int) (motionEvent.getRawX() - initialTouchX);
                     int rawY = (int) (motionEvent.getRawY() - initialTouchY);
                     try {
@@ -110,7 +111,7 @@ public class ModMenu {
                     initialTouchY = motionEvent.getRawY();
                     return true;
                 case MotionEvent.ACTION_MOVE:
-                    scrollView.setAlpha(0.2f);
+                    parentMod.setAlpha(0.2f);
                     wParam.x = initialX + ((int) (motionEvent.getRawX() - initialTouchX));
                     wParam.y = initialY + ((int) (motionEvent.getRawY() - initialTouchY));
                     windowManager.updateViewLayout(rootFrame, wParam);
@@ -124,15 +125,21 @@ public class ModMenu {
 
     @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
     private void initScrollView() {
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+        //PARENT LAYOUT
+        LinearLayout.LayoutParams parentP = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+        parentMod = new LinearLayout(context);
+        parentMod.setOrientation(LinearLayout.VERTICAL);
+        parentMod.setLayoutParams(parentP);
+        //MOD SCROLL
+        LinearLayout.LayoutParams scrollParam = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
         scrollView = new ScrollView(context);
         scrollView.setPadding(10, 10, 10, 10);
-        scrollView.setLayoutParams(params);
-        scrollView.setBackgroundColor(Color.GRAY);
+        scrollView.setLayoutParams(scrollParam);
+        scrollView.setBackgroundColor(Color.LTGRAY);
         //HEADER
         RelativeLayout headerLayout = new RelativeLayout(context);
         headerLayout.setPadding(0, 0, 10, 10);
-        headerLayout.setBackgroundColor(Color.MAGENTA);
+        headerLayout.setBackgroundColor(Color.BLUE);
         headerLayout.setOnTouchListener(motionListener());
         TextView headerText = new TextView(context);
         headerText.setTypeface(null, Typeface.BOLD);
@@ -145,7 +152,8 @@ public class ModMenu {
         //MOD LAYOUT
         LinearLayout modLayout = new LinearLayout(context);
         modLayout.setOrientation(LinearLayout.VERTICAL);
-        modLayout.setLayoutParams(params);
+        modLayout.setLayoutParams(scrollParam);
+        modLayout.setBackgroundColor(Color.BLACK);
         //MOD LIST
         LinearLayout modListLayout = new LinearLayout(context);
         modListLayout.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
@@ -153,30 +161,51 @@ public class ModMenu {
         modListLayout.setPadding(0, 40, 0, 40);
         //FOOTER
         RelativeLayout footerLayout = new RelativeLayout(context);
-        footerLayout.setBackgroundColor(Color.YELLOW);
-        footerLayout.setPadding(30, 10, 30, 10);
+        footerLayout.setBackgroundColor(Color.BLUE);
+        footerLayout.setPadding(30, 20, 30, 20);
+        footerLayout.setOnTouchListener(motionListener());
         //KILL/HIDE BUTTON ITERATION
         for (int i = 0; i < 2; i++) {
             TextView btn = new TextView(context);
             btn.setText(i == 0 ? "KILL" : "HIDE");
             btn.setTypeface(null, Typeface.BOLD);
-            btn.setTextColor(Color.BLUE);
+            btn.setTextColor(Color.WHITE);
             RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
             btnParams.addRule(i == 0 ? RelativeLayout.ALIGN_START : RelativeLayout.ALIGN_PARENT_END);
             btn.setLayoutParams(btnParams);
             btn.setOnClickListener(hideKillBtn(i));
             footerLayout.addView(btn);
         }
-        scrollView.addView(modLayout);
-        modLayout.addView(headerLayout);
+        //ADD MOD TO SCROLL VIEW
         modLayout.addView(modListLayout);
-
+        scrollView.addView(modLayout);
         //MOD ITERATION
         for (int i = 0; i < Start.getListMenu().length; i++) {
-            LinearLayout sw = modUtilities.registerSwitcher(Start.getListMenu()[i], 0, Start::switchState);
-            modListLayout.addView(sw);
+            modListLayout.addView(modChild(i));
         }
-        modLayout.addView(footerLayout);
+        //ADD ALL TO PARENT MOD
+        parentMod.addView(headerLayout);
+        parentMod.addView(scrollView);
+        parentMod.addView(footerLayout);
+    }
+
+    LinearLayout modChild(int i) {
+        String[] m = Start.getListMenu()[i].split("_");
+        switch (m[0]) {
+            case "Switch":
+                return modUtilities.registerSwitcher(m[1], i, Start::switchState);
+            case "TextField":
+                return modUtilities.registerTextField(m[1], i);
+            case "Slider":
+                return modUtilities.registerSlider(m[1], i);
+            default:
+                LinearLayout other = new LinearLayout(context);
+                TextView tv = new TextView(context);
+                tv.setText(m[1]);
+                tv.setTextColor(Color.WHITE);
+                other.addView(tv);
+                return other;
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -199,7 +228,7 @@ public class ModMenu {
         return view -> {
             switch (index) {
                 case 0:
-                    Toast.makeText(context, String.valueOf(index), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "not implemented yet", Toast.LENGTH_SHORT).show();
                     break;
                 case 1:
                     rootFrame.removeView(boxMenu);

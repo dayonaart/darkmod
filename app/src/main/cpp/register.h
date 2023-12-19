@@ -66,7 +66,7 @@ void startActivityPermission(JNIEnv *env, jobject ctx) {
 
 jobjectArray getFeatureList(JNIEnv *env, jclass thiz) {
     jobjectArray ret;
-    const char *features[] = {"Switch_Unlimited Money"};
+    const char *features[] = {"Switch_Unlimited Money", "Slider_Increase Point"};
     int Total_Feature = (sizeof features / sizeof features[0]);
     ret = (jobjectArray)
             env->NewObjectArray(Total_Feature, env->FindClass("java/lang/String"),
