@@ -1,6 +1,6 @@
 # darkmod
 
-This is a simple template for the usage of Dobby with a Mod Menu written in Java and C++
+This is a simple template for the usage of Dobby with a Mod Menu written in Java and C/C++
 
 ### Not For Noobs
 
