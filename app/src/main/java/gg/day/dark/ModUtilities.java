@@ -21,8 +21,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -65,29 +64,27 @@ public class ModUtilities {
         return linearLayout;
     }
 
-    public LinearLayout registerTextField(String modName, int index) {
+    public LinearLayout registerTextField(String modName, int index, ChangeCallback callback) {
         LinearLayout linearLayout = new LinearLayout(context);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.setPadding(10, 5, 0, 5);
+        TextView textView = new TextView(context);
+        textView.setText(modName);
+        textView.setTextColor(Color.WHITE);
+        LinearLayout modL = new LinearLayout(context);
+        modL.setOrientation(LinearLayout.HORIZONTAL);
         EditText editText = new EditText(context);
-        editText.setText(modName, TextView.BufferType.EDITABLE);
-        editText.setTextColor(Color.WHITE);
-        editText.setEnabled(true);
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        linearLayout.addView(editText);
+        editText.setText("0x360BC4", TextView.BufferType.EDITABLE);
+        editText.setTextColor(Color.BLACK);
+        editText.setBackgroundColor(Color.WHITE);
+        editText.setWidth(300);
+        Button btn = new Button(context);
+        btn.setText("Update");
+        btn.setTextColor(Color.WHITE);
+//        btn.setOnClickListener(v -> callback.onClick(modName, index, false, editText.getText().toString()));
+        modL.addView(editText);
+        modL.addView(btn);
+        linearLayout.addView(modL);
         return linearLayout;
     }
 
@@ -126,5 +123,7 @@ public class ModUtilities {
 }
 
 interface ChangeCallback {
-    void onClick(String modName, int index, boolean state);
+    void onClick(String modName, int index, boolean switchState);
 }
+
+

@@ -21,7 +21,7 @@ import android.widget.Toast;
 public class Start {
     private static native int checkOverlayPermission(Context context);
 
-    public static native void switchState(String modName, int modIndex, boolean state);
+    public static native void changeState(String modName, int modIndex, boolean switchState);
 
     public static native String base64Icon();
 

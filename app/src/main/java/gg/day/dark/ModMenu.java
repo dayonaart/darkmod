@@ -60,7 +60,7 @@ public class ModMenu {
     @SuppressLint("WrongConstant")
     private WindowManager setWindowManager() {
         int iParams = Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O ? 2038 : 2002;
-        wParam = new WindowManager.LayoutParams(WRAP_CONTENT, WRAP_CONTENT, iParams, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, -3);
+        wParam = new WindowManager.LayoutParams(WRAP_CONTENT, WRAP_CONTENT, iParams, 8, -3);
         wParam.gravity = 51;
         wParam.x = 0;
         wParam.y = 100;
@@ -155,7 +155,6 @@ public class ModMenu {
         modLayout.setBackgroundColor(Color.BLACK);
         //MOD LIST
         LinearLayout modListLayout = new LinearLayout(context);
-        modListLayout.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
         modListLayout.setOrientation(LinearLayout.VERTICAL);
         modListLayout.setPadding(0, 40, 0, 40);
         //FOOTER
@@ -192,9 +191,9 @@ public class ModMenu {
         String[] m = Start.getListMenu()[i].split("_");
         switch (m[0]) {
             case "Switch":
-                return modUtilities.registerSwitcher(m[1], i, Start::switchState);
+                return modUtilities.registerSwitcher(m[1], i, Start::changeState);
             case "TextField":
-                return modUtilities.registerTextField(m[1], i);
+                return modUtilities.registerTextField(m[1], i, Start::changeState);
             case "Slider":
                 return modUtilities.registerSlider(m[1], i);
             default:

@@ -29,17 +29,20 @@ Java_gg_day_dark_Start_checkOverlayPermission(JNIEnv *env, jclass thiz,
 
 void init(JNIEnv *env, jclass obj, jobject thiz) {
     pthread_t ptid;
-    pthread_create(&ptid, NULL, hack_thread, NULL);
+    pthread_create(&ptid, nullptr, hack_thread, nullptr);
     utils::make_toast(env, thiz, "Mod by Dayona");
 }
 
-void switchState(JNIEnv *env, jclass thiz, jstring modName,
-                 jint modIndex, jboolean state) {
-    const char *nativeString = env->GetStringUTFChars(modName, nullptr);
-    LOGD("INDEX : %i | VALUE : %hhu | MOD NAME %s:", modIndex, state, nativeString);
+void changeState(JNIEnv *env, jclass thiz, jstring modName,
+                 jint modIndex, jboolean switchState) {
+    const char *modNameChar = env->GetStringUTFChars(modName, nullptr);
+//    const char *textStateChar = env->GetStringUTFChars(txtState, nullptr);
+    LOGD("INDEX : %i | VALUE : %hhu | MOD NAME %s:", modIndex, switchState, modNameChar);
     switch (modIndex) {
         case 0:
-            unlimitedMoney = state;
+            unlimitedMoney = switchState;
+//            textState = textStateChar;
+//            LOGD("%u", utils::get_absolute_address(*textState));
             break;
         case 1:
             break;
@@ -57,7 +60,7 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     jclass c = env->FindClass("gg/day/dark/Start");
     if (c == nullptr) return JNI_ERR;
     static const JNINativeMethod methods[] = {
-            {"switchState", "(Ljava/lang/String;IZ)V",     reinterpret_cast<void *>(switchState)},
+            {"changeState", "(Ljava/lang/String;IZ)V",     reinterpret_cast<void *>(changeState)},
             {"base64Icon",  "()Ljava/lang/String;",        reinterpret_cast<void *>(icon)},
             {"getListMenu",
                             "()[Ljava/lang/String;",       reinterpret_cast<void *>(getFeatureList)},
