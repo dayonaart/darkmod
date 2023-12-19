@@ -10,8 +10,8 @@
  *
  * Created By Dayona
  */
-#ifndef ANDROICPP_REGISTER_H
-#define ANDROICPP_REGISTER_H
+#ifndef DAYDARK_REGISTER_H
+#define DAYDARK_REGISTER_H
 
 #include "unistd.h"
 #include "sstream"
@@ -77,4 +77,4 @@ jobjectArray getFeatureList(JNIEnv *env, jclass thiz) {
 }
 
 
-#endif //ANDROICPP_REGISTER_H
+#endif //DAYDARK_REGISTER_H

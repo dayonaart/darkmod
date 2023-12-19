@@ -10,8 +10,8 @@
  *
  * Created By Dayona
  */
-#ifndef ANDROICPP_HACK_THREAD_H
-#define ANDROICPP_HACK_THREAD_H
+#ifndef DAYDARK_HACK_THREAD_H
+#define DAYDARK_HACK_THREAD_H
 
 #include "Includes/Utils.h"
 #include <dobby.h>
@@ -51,4 +51,4 @@ void *hack_thread(void *) {
     return nullptr;
 }
 
-#endif //ANDROICPP_HACK_THREAD_H
+#endif //DAYDARK_HACK_THREAD_H

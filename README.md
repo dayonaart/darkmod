@@ -2,6 +2,17 @@
 
 This is a simple template for the usage of Dobby with a Mod Menu written in Java and C++
 
+### Not For Noobs
+
+### REQUIRED
+
+1. A Brain
+2. Java Skill ( Intermediate )
+3. C++ Skill ( Intermediate )
+4. Smali Skill ( Basic )
+5. Apktool
+6. Il2CppDumper
+
 ### Tutorial:
 
 * https://guidedhacking.com/threads/function-pointers-and-a-tutorial-for-my-hooking-template.14771/#post-90490
@@ -27,7 +38,7 @@ Station Manager</a>
 1. decompile game apk
 
    <img src='screenshot/apktool_d.png' width='300' alt="">
-   
+
 2. edit game manifest
 
    <img src='screenshot/edit_mani.png' width='600' alt="">
