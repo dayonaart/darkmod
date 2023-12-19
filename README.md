@@ -25,10 +25,14 @@ Station Manager</a>
 ### Step to embed mod into game
 
 1. decompile game apk
+
    <img src='screenshot/apktool_d.png' width='300' alt="">
+   
 2. edit game manifest
+
    <img src='screenshot/edit_mani.png' width='600' alt="">
 3. embed mod to game smali
+
    <img src='screenshot/add_start_smali.png' width='600' alt="">
 
 ### Credits:
