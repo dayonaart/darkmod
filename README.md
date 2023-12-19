@@ -42,7 +42,7 @@ Station Manager</a>
 2. edit game manifest
 
    <img src='screenshot/edit_mani.png' width='450' alt="">
-3. embed mod to game smali
+3. embed mod into smali code
 
    <img src='screenshot/add_start_smali.png' width='450' alt="">
 
