@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/main.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/main.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/main.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/Substrate/hde64.c.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/hde64.c",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/hde64.c"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/Substrate/SubstrateDebug.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SubstrateDebug.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SubstrateDebug.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/Substrate/SubstrateHook.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SubstrateHook.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SubstrateHook.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/Substrate/SubstratePosixMemory.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SubstratePosixMemory.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SubstratePosixMemory.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/Substrate/SymbolFinder.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SymbolFinder.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/Substrate/SymbolFinder.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/KittyMemory/KittyMemory.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/KittyMemory.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/KittyMemory.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/KittyMemory/MemoryPatch.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/MemoryPatch.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/MemoryPatch.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/KittyMemory/MemoryBackup.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/MemoryBackup.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/MemoryBackup.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/KittyMemory/KittyUtils.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/KittyUtils.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/KittyMemory/KittyUtils.cpp"
+},
+{
+  "directory": "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+  "command": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android24 --sysroot=/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Ddaydark_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/daydark.dir/And64InlineHook/And64InlineHook.cpp.o -c /home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/And64InlineHook/And64InlineHook.cpp",
+  "file": "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/And64InlineHook/And64InlineHook.cpp"
+}
+]

@@ -1,0 +1,1 @@
+/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/CMakeLists.txt

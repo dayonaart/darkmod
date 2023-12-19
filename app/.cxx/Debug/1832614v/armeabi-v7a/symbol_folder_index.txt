@@ -1,0 +1,1 @@
+/home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a

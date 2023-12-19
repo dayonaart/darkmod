@@ -1,0 +1,22 @@
+# ninja log v5
+3	428	1702908794718538871	CMakeFiles/daydark.dir/Substrate/SubstratePosixMemory.cpp.o	f06d6b3ddf7e31c8
+7	544	1702908794835537614	CMakeFiles/daydark.dir/KittyMemory/MemoryBackup.cpp.o	5f8656d166e8fa5a
+4	505	1702908794794538055	CMakeFiles/daydark.dir/KittyMemory/MemoryPatch.cpp.o	e13f98f51f6ea509
+1	27	1702975005544869970	build.ninja	5f168257fe1674ea
+3	404	1702908794693539139	CMakeFiles/daydark.dir/Substrate/SubstrateHook.cpp.o	f23862badea544f8
+2	665	1702908794952536357	CMakeFiles/daydark.dir/main.cpp.o	d1be5aeb35622465
+15	196	1702908794485541373	CMakeFiles/daydark.dir/And64InlineHook/And64InlineHook.cpp.o	a1eea703c77daa15
+665	719	1702908795008535756	/home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so	962aaba925247247
+2	426	1702908794716538892	CMakeFiles/daydark.dir/Substrate/SubstrateDebug.cpp.o	964055eb6fa2e9c0
+0	3	0	clean	32b271c3c1e5c8cd
+3	421	1702908794708538978	CMakeFiles/daydark.dir/Substrate/SymbolFinder.cpp.o	8d7d0f9d5eca4c47
+8	595	1702908794885537077	CMakeFiles/daydark.dir/KittyMemory/KittyUtils.cpp.o	4e779be76919c43d
+3	490	1702908794780538205	CMakeFiles/daydark.dir/KittyMemory/KittyMemory.cpp.o	a1e8bd74171b2812
+2	42	1702908794333543006	CMakeFiles/daydark.dir/Substrate/hde64.c.o	bcd05616e68155c6
+1	48	1702975005544869970	build.ninja	5f168257fe1674ea
+0	2	0	clean	32b271c3c1e5c8cd
+0	2	0	clean	32b271c3c1e5c8cd
+1	4	0	clean	32b271c3c1e5c8cd
+0	3	0	clean	32b271c3c1e5c8cd
+0	3	0	clean	32b271c3c1e5c8cd
+0	3	0	clean	32b271c3c1e5c8cd

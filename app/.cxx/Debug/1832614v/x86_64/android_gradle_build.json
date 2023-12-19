@@ -1,0 +1,40 @@
+{
+  "buildFiles": [
+    "/home/dayona/AndroidStudioProjects/androicpp/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/dayona/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/dayona/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/dayona/AndroidStudioProjects/androicpp/app/.cxx/Debug/1832614v/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "daydark::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86_64",
+      "artifactName": "daydark",
+      "output": "/home/dayona/AndroidStudioProjects/androicpp/app/build/intermediates/cxx/Debug/1832614v/obj/x86_64/libdaydark.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/dayona/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
