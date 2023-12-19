@@ -24,7 +24,6 @@ import android.widget.Toast;
 public class ModMenu {
 
     private ModUtilities modUtilities;
-
     WindowManager windowManager;
     WindowManager.LayoutParams wParam;
     FrameLayout rootFrame;
