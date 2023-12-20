@@ -72,22 +72,6 @@ void openOverlaySetting(JNIEnv *env, jobject ctx) {
     env->CallVoidMethod(ctx, startActivity, intent);
 }
 
-jobjectArray getFeatureList(JNIEnv *env, jclass thiz) {
-    jobjectArray ret;
-    const char *features[] = {"Switch_Unlimited Money",
-                              "Switch_Unlimited Coin",
-                              "Switch_Unlimited Point",
-                              "Switch_Use Cheat",
-                              "Switch_Landscape Mode"};
-    int Total_Feature = (sizeof features / sizeof features[0]);
-    ret = (jobjectArray)
-            env->NewObjectArray(Total_Feature, env->FindClass("java/lang/String"),
-                                env->NewStringUTF(""));
-    for (int i = 0; i < Total_Feature; i++)
-        env->SetObjectArrayElement(ret, i, env->NewStringUTF(features[i]));
-    return (ret);
-}
-
 void startService(JNIEnv *env, jobject ctx) {
     jclass native_context = env->GetObjectClass(ctx);
     jclass intentClass = env->FindClass("android/content/Intent");

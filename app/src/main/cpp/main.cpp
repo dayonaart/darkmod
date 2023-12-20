@@ -19,35 +19,10 @@
 #include "Includes/Utils.h"
 #include "utilities.h"
 
+
 void createThread(JNIEnv *env, jclass clazz, jobject context) {
     pthread_t ptid;
     pthread_create(&ptid, nullptr, hack_thread, nullptr);
-}
-
-void changeState(JNIEnv *env, jclass thiz, jstring modName,
-                 jint modIndex, jboolean switchState, jstring txtState) {
-    const char *modNameChar = env->GetStringUTFChars(modName, nullptr);
-
-    LOGD("INDEX : %i | SWITCH VALUE : %hhu |  MOD NAME %s:", modIndex, switchState, modNameChar);
-    switch (modIndex) {
-        case 0:
-            _unlimitedMoney = switchState;
-            break;
-        case 1:
-            _unlimitedCoin = switchState;
-            break;
-        case 2:
-            _unlimitedPoint = switchState;
-            break;
-        case 3:
-            _isCheatApk = switchState;
-            break;
-        case 4:
-            _isLandScapeMode = switchState;
-            break;
-        default:
-            break;
-    }
 }
 
 
@@ -63,10 +38,10 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
             {"checkOverlayPermission", "(Landroid/content/Context;)V",
                                                                 reinterpret_cast<void *>(checkOverlayPermission)},
             {"changeState",            "(Ljava/lang/String;IZLjava/lang/String;)V",
-                                                                reinterpret_cast<void *>(changeState)},
+                                                                reinterpret_cast<void *>(changeStateStationManager)},
             {"base64Icon",             "()Ljava/lang/String;",  reinterpret_cast<void *>(icon)},
             {"getListMenu",
-                                       "()[Ljava/lang/String;", reinterpret_cast<void *>(getFeatureList)},
+                                       "()[Ljava/lang/String;", reinterpret_cast<void *>(getFeatureListStationManager)},
             {"createThread",           "(Landroid/content/Context;)V",
                                                                 reinterpret_cast<void *>(createThread)},
     };
