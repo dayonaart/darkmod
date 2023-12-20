@@ -59,7 +59,7 @@ public class ModUtilities {
         sw.setWidth(500);
         sw.setTextSize(10);
         sw.setPadding(10, 5, 0, 5);
-        sw.setOnCheckedChangeListener((buttonView, isChecked) -> callback.onClick(modName, index, isChecked));
+        sw.setOnCheckedChangeListener((buttonView, isChecked) -> callback.onClick(modName, index, isChecked, null));
         linearLayout.addView(sw);
         return linearLayout;
     }
@@ -81,7 +81,7 @@ public class ModUtilities {
         Button btn = new Button(context);
         btn.setText("Update");
         btn.setTextColor(Color.WHITE);
-//        btn.setOnClickListener(v -> callback.onClick(modName, index, false, editText.getText().toString()));
+        btn.setOnClickListener(v -> callback.onClick(modName, index, false, editText.getText().toString()));
         modL.addView(editText);
         modL.addView(btn);
         linearLayout.addView(modL);
@@ -123,7 +123,7 @@ public class ModUtilities {
 }
 
 interface ChangeCallback {
-    void onClick(String modName, int index, boolean switchState);
+    void onClick(String modName, int index, boolean switchState, String txtState);
 }
 
 

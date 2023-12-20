@@ -19,24 +19,32 @@
 
 using namespace std;
 
-void startActivityPermission(JNIEnv *env, jobject ctx);
+void *exit_thread(void *) {
+    sleep(5);
+    exit(0);
+}
 
-bool checkOverlayPermission(JNIEnv *env, jobject ctx) {
+void openOverlaySetting(JNIEnv *env, jobject ctx);
+
+void startService(JNIEnv *env, jobject ctx);
+
+void checkOverlayPermission(JNIEnv *env, jclass startClz, jobject ctx) {
     int sdkVer = android_get_device_api_level();
     if (sdkVer >= 23) {
         jclass Settings = env->FindClass("android/provider/Settings");
         jmethodID canDraw = env->GetStaticMethodID(Settings, "canDrawOverlays",
                                                    "(Landroid/content/Context;)Z");
         if (!env->CallStaticBooleanMethod(Settings, canDraw, ctx)) {
-            startActivityPermission(env, ctx);
-            return false;
+            openOverlaySetting(env, ctx);
+            pthread_t pthread;
+            pthread_create(&pthread, nullptr, exit_thread, nullptr);
+            return;
         }
-        return true;
+        startService(env, ctx);
     }
-    return true;
 }
 
-void startActivityPermission(JNIEnv *env, jobject ctx) {
+void openOverlaySetting(JNIEnv *env, jobject ctx) {
     jclass native_context = env->GetObjectClass(ctx);
     jmethodID startActivity = env->GetMethodID(native_context, "startActivity",
                                                "(Landroid/content/Intent;)V");
@@ -66,7 +74,7 @@ void startActivityPermission(JNIEnv *env, jobject ctx) {
 
 jobjectArray getFeatureList(JNIEnv *env, jclass thiz) {
     jobjectArray ret;
-    const char *features[] = {"Switch_Unlimited Money"};
+    const char *features[] = {"Switch_Unlimited Money", "Switch_Unlimited Coin",};
     int Total_Feature = (sizeof features / sizeof features[0]);
     ret = (jobjectArray)
             env->NewObjectArray(Total_Feature, env->FindClass("java/lang/String"),
@@ -76,5 +84,16 @@ jobjectArray getFeatureList(JNIEnv *env, jclass thiz) {
     return (ret);
 }
 
+void startService(JNIEnv *env, jobject ctx) {
+    jclass native_context = env->GetObjectClass(ctx);
+    jclass intentClass = env->FindClass("android/content/Intent");
+    jclass actionString = env->FindClass("gg/day/dark/ModService");
+    jmethodID newIntent = env->GetMethodID(intentClass, "<init>",
+                                           "(Landroid/content/Context;Ljava/lang/Class;)V");
+    jobject intent = env->NewObject(intentClass, newIntent, ctx, actionString);
+    jmethodID startActivityMethodId = env->GetMethodID(native_context, "startService",
+                                                       "(Landroid/content/Intent;)Landroid/content/ComponentName;");
+    env->CallObjectMethod(ctx, startActivityMethodId, intent);
+}
 
 #endif //DAYDARK_REGISTER_H

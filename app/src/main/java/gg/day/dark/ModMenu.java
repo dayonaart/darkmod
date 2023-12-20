@@ -45,12 +45,12 @@ public class ModMenu {
     LinearLayout parentMod;
     LinearLayout icon;
     ImageView iconLauncher;
-    private ModUtilities modUtilities;
-    private Context context;
+    private final ModUtilities modUtilities;
+    private final Context context;
     private int initialX, initialY;
     private float initialTouchX, initialTouchY;
 
-    public void createMenu(Context context) {
+    public ModMenu(Context context) {
         this.context = context;
         modUtilities = new ModUtilities(context);
         setRootFrame();

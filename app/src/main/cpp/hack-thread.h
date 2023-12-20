@@ -16,27 +16,46 @@
 #include "Includes/Utils.h"
 #include <dobby.h>
 
-bool unlimitedMoney = false;
 
-long (*oldGetMoney)(void *instance);
+bool unlimitedMoney = true;
+bool unlimitedCoin = false;
+
+long long (*oldGetMoney)(void *instance);
 
 bool hookInitialized = false;
 
-long getMoney(void *instance) {
+long long getMoney(void *instance) {
     if (instance != nullptr) {
         if (!hookInitialized) {
             hookInitialized = true;
             LOGD("GameManager initialize hooked");
             return oldGetMoney(instance);
         }
-        if (unlimitedMoney) {
-            LOGD("MONEY VALUE hooked");
-            return 999999999;
-        } else {
+        if (unlimitedMoney)
+            return 9999999999999999;
+        else
             return oldGetMoney(instance);
-        }
     } else {
         return oldGetMoney(instance);
+    }
+}
+
+long (*oldCoin)(void *instance);
+
+long getCoin(void *instance) {
+    if (instance != nullptr) {
+        if (!hookInitialized) {
+            hookInitialized = true;
+            LOGD("GameManager initialize hooked");
+            return oldCoin(instance);
+        }
+        if (unlimitedCoin) {
+            return 99999999;
+        } else {
+            return oldCoin(instance);
+        }
+    } else {
+        return oldCoin(instance);
     }
 }
 
@@ -45,10 +64,25 @@ void *hack_thread(void *) {
     do {
         sleep(1);
     } while (!utils::isLibraryLoaded(libName));
+#if defined(__aarch64__)
+    //ARM64
+#else
     LOGD("found the il2cpp lib. Address is: %p", (void *) utils::find_library(libName));
     DobbyHook((void *) utils::get_absolute_address(0x360BC4), (void *) getMoney,
               (void **) &oldGetMoney);
+//    DobbyHook((void *) utils::get_absolute_address(0x5E3654), (void *) getCoin,
+#endif
+
+    //Anti-leech
+    /*if (!iconValid || !initValid || !settingsValid) {
+        //Bad function to make it crash
+        sleep(5);
+        int *p = 0;
+        *p = 0;
+    }*/
+
     return nullptr;
 }
+
 
 #endif //DAYDARK_HACK_THREAD_H

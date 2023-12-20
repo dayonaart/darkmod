@@ -1,4 +1,5 @@
 # ninja log v5
-1	250	1703004107657051951	CMakeFiles/daydark.dir/Patching/Patch.cpp.o	479b0e1678d442a6
-0	338	1703004107743050970	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
-339	403	1703004107809050218	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	262	1703066623596144781	CMakeFiles/daydark.dir/Patching/Patch.cpp.o	479b0e1678d442a6
+0	341	1703066623673144007	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+341	394	1703066623727143464	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+0	3	0	clean	32b271c3c1e5c8cd

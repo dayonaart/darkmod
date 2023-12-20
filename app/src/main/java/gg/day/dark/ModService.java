@@ -35,14 +35,13 @@ public class ModService extends Service {
 
     @Override
     public void onCreate() {
-        Start.init(this);
-        modMenu = new ModMenu();
-        modMenu.createMenu(this);
+        Start.createThread(this);
+        modMenu = new ModMenu(this);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             public void run() {
                 thread();
-                handler.postDelayed(this, 1000);
+                handler.postDelayed(this, 500);
             }
         });
         super.onCreate();
@@ -55,13 +54,13 @@ public class ModService extends Service {
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
-        stopSelf();
+        super.onTaskRemoved(rootIntent);
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        super.onTaskRemoved(rootIntent);
+        stopSelf();
     }
 
     private void thread() {
@@ -76,11 +75,13 @@ public class ModService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (modMenu.rootFrame != null)
+        Toast.makeText(this, "Game Stopped", Toast.LENGTH_SHORT).show();
+        if (modMenu.rootFrame != null) {
             modMenu.windowManager.removeView(modMenu.rootFrame);
-        if (modMenu.icon != null)
+        }
+        if (modMenu.icon != null) {
             modMenu.icon.removeView(modMenu.iconLauncher);
-        Toast.makeText(getBaseContext(), "Game Stopped", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private boolean isNotInGame() {

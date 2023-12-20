@@ -18,33 +18,22 @@
 #include "hack-thread.h"
 #include "Includes/Utils.h"
 
-using namespace std;
-
-extern "C"
-JNIEXPORT int JNICALL
-Java_gg_day_dark_Start_checkOverlayPermission(JNIEnv *env, jclass thiz,
-                                              jobject context) {
-    return checkOverlayPermission(env, context);
-}
-
-void init(JNIEnv *env, jclass obj, jobject thiz) {
+void createThread(JNIEnv *env, jclass clazz, jobject context) {
     pthread_t ptid;
     pthread_create(&ptid, nullptr, hack_thread, nullptr);
-    utils::make_toast(env, thiz, "Mod by Dayona");
 }
 
 void changeState(JNIEnv *env, jclass thiz, jstring modName,
-                 jint modIndex, jboolean switchState) {
+                 jint modIndex, jboolean switchState, jstring txtState) {
     const char *modNameChar = env->GetStringUTFChars(modName, nullptr);
-//    const char *textStateChar = env->GetStringUTFChars(txtState, nullptr);
-    LOGD("INDEX : %i | VALUE : %hhu | MOD NAME %s:", modIndex, switchState, modNameChar);
+
+    LOGD("INDEX : %i | SWITCH VALUE : %hhu |  MOD NAME %s:", modIndex, switchState, modNameChar);
     switch (modIndex) {
         case 0:
             unlimitedMoney = switchState;
-//            textState = textStateChar;
-//            LOGD("%u", utils::get_absolute_address(*textState));
             break;
         case 1:
+            unlimitedCoin = switchState;
             break;
         default:
             break;
@@ -60,11 +49,15 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     jclass c = env->FindClass("gg/day/dark/Start");
     if (c == nullptr) return JNI_ERR;
     static const JNINativeMethod methods[] = {
-            {"changeState", "(Ljava/lang/String;IZ)V",     reinterpret_cast<void *>(changeState)},
-            {"base64Icon",  "()Ljava/lang/String;",        reinterpret_cast<void *>(icon)},
+            {"checkOverlayPermission", "(Landroid/content/Context;)V",
+                                                                reinterpret_cast<void *>(checkOverlayPermission)},
+            {"changeState",            "(Ljava/lang/String;IZLjava/lang/String;)V",
+                                                                reinterpret_cast<void *>(changeState)},
+            {"base64Icon",             "()Ljava/lang/String;",  reinterpret_cast<void *>(icon)},
             {"getListMenu",
-                            "()[Ljava/lang/String;",       reinterpret_cast<void *>(getFeatureList)},
-            {"init",        "(Lgg/day/dark/ModService;)V", reinterpret_cast<void *>(init)},
+                                       "()[Ljava/lang/String;", reinterpret_cast<void *>(getFeatureList)},
+            {"createThread",           "(Landroid/content/Context;)V",
+                                                                reinterpret_cast<void *>(createThread)},
     };
     int rc = env->RegisterNatives(c, methods, sizeof(methods) / sizeof(JNINativeMethod));
     if (rc != JNI_OK) return rc;
