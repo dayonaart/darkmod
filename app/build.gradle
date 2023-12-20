@@ -7,7 +7,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "gg.day.androicpp"
+        applicationId "gg.day.dark"
         minSdk 24
         targetSdk 34
         versionCode 1

@@ -14,13 +14,29 @@
 
 package gg.day.dark;
 
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Start.Mod(this);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
+        RelativeLayout relativeLayout = new RelativeLayout(this);
+        relativeLayout.setLayoutParams(layoutParams);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+        Button button = new Button(this);
+        params.addRule(RelativeLayout.CENTER_IN_PARENT);
+        button.setLayoutParams(params);
+        button.setText("TEST");
+        button.setOnClickListener(v -> Start.Mod(this));
+        relativeLayout.addView(button);
+        setContentView(relativeLayout);
+//        Start.Mod(this);
     }
 }

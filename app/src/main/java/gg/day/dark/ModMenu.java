@@ -59,6 +59,7 @@ public class ModMenu {
 
     @SuppressLint("WrongConstant")
     private WindowManager setWindowManager() {
+        //WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
         int iParams = Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O ? 2038 : 2002;
         wParam = new WindowManager.LayoutParams(WRAP_CONTENT, WRAP_CONTENT, iParams, 8, -3);
         wParam.gravity = 51;

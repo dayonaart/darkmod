@@ -18,6 +18,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 public class Start {
+
     private static native void checkOverlayPermission(Context context);
 
     public static native void changeState(String modName, int modIndex, boolean switchState, String txtState);

@@ -17,6 +17,7 @@
 #include "register.h"
 #include "hack-thread.h"
 #include "Includes/Utils.h"
+#include "utilities.h"
 
 void createThread(JNIEnv *env, jclass clazz, jobject context) {
     pthread_t ptid;
@@ -30,15 +31,25 @@ void changeState(JNIEnv *env, jclass thiz, jstring modName,
     LOGD("INDEX : %i | SWITCH VALUE : %hhu |  MOD NAME %s:", modIndex, switchState, modNameChar);
     switch (modIndex) {
         case 0:
-            unlimitedMoney = switchState;
+            _unlimitedMoney = switchState;
             break;
         case 1:
-            unlimitedCoin = switchState;
+            _unlimitedCoin = switchState;
+            break;
+        case 2:
+            _unlimitedPoint = switchState;
+            break;
+        case 3:
+            _isCheatApk = switchState;
+            break;
+        case 4:
+            _isLandScapeMode = switchState;
             break;
         default:
             break;
     }
 }
+
 
 extern "C"
 JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
@@ -63,3 +74,5 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     if (rc != JNI_OK) return rc;
     return JNI_VERSION_1_6;
 }
+
+

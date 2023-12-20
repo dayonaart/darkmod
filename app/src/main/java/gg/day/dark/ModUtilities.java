@@ -64,6 +64,7 @@ public class ModUtilities {
         return linearLayout;
     }
 
+    @SuppressLint("SetTextI18n")
     public LinearLayout registerTextField(String modName, int index, ChangeCallback callback) {
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);

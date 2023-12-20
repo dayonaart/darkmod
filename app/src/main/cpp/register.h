@@ -74,7 +74,11 @@ void openOverlaySetting(JNIEnv *env, jobject ctx) {
 
 jobjectArray getFeatureList(JNIEnv *env, jclass thiz) {
     jobjectArray ret;
-    const char *features[] = {"Switch_Unlimited Money", "Switch_Unlimited Coin",};
+    const char *features[] = {"Switch_Unlimited Money",
+                              "Switch_Unlimited Coin",
+                              "Switch_Unlimited Point",
+                              "Switch_Use Cheat",
+                              "Switch_Landscape Mode"};
     int Total_Feature = (sizeof features / sizeof features[0]);
     ret = (jobjectArray)
             env->NewObjectArray(Total_Feature, env->FindClass("java/lang/String"),
