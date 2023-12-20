@@ -28,7 +28,7 @@ Register your mod menu here
 
 <img src='screenshot/register.png' width='450' alt="">
 
-Test Game
+### Test Game
 
 <img src='screenshot/khack.gif' width='150' height="300" alt="">
 Test game from Kairosoft
