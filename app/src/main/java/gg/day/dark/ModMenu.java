@@ -146,7 +146,7 @@ public class ModMenu {
         headerText.setTextColor(Color.WHITE);
         RelativeLayout.LayoutParams headerP = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
         headerP.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        headerText.setText("MOD BY DAYONA");
+        headerText.setText("MODDED BY DAYONA");
         headerText.setLayoutParams(headerP);
         headerLayout.addView(headerText);
         //MOD LAYOUT
@@ -227,11 +227,15 @@ public class ModMenu {
         return view -> {
             switch (index) {
                 case 0:
-                    Toast.makeText(context, "not implemented yet", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Remember the last icon position!", Toast.LENGTH_SHORT).show();
+                    rootFrame.removeView(boxMenu);
+                    rootFrame.addView(icon);
+                    icon.setAlpha(0f);
                     break;
                 case 1:
                     rootFrame.removeView(boxMenu);
                     rootFrame.addView(icon);
+                    icon.setAlpha(1f);
                     break;
             }
         };
