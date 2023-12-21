@@ -18,6 +18,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -38,11 +39,10 @@ import android.widget.Toast;
 public class ModMenu {
 
     WindowManager windowManager;
-    WindowManager.LayoutParams wParam;
+    private WindowManager.LayoutParams wParam;
     FrameLayout rootFrame;
-    LinearLayout boxMenu;
-    ScrollView scrollView;
-    LinearLayout parentMod;
+    private LinearLayout boxMenu;
+    private LinearLayout parentMod;
     LinearLayout icon;
     ImageView iconLauncher;
     private final ModUtilities modUtilities;
@@ -72,7 +72,7 @@ public class ModMenu {
 
     private void setRootFrame() {
         rootFrame = new FrameLayout(context);
-        initScrollView();
+        setModBody();
         setBoxMenu();
         setIcon();
         rootFrame.addView(icon);
@@ -124,30 +124,33 @@ public class ModMenu {
     }
 
     @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
-    private void initScrollView() {
+    private void setModBody() {
         //PARENT LAYOUT
         LinearLayout.LayoutParams parentP = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
         parentMod = new LinearLayout(context);
         parentMod.setOrientation(LinearLayout.VERTICAL);
         parentMod.setLayoutParams(parentP);
+        parentMod.setBackground(Utilities.roundedShapeTB(20, 20, Color.DKGRAY));
+        parentMod.setPadding(10, 10, 10, 10);
         //MOD SCROLL
         LinearLayout.LayoutParams scrollParam = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
-        scrollView = new ScrollView(context);
+        ScrollView scrollView = new ScrollView(context);
         scrollView.setPadding(10, 10, 10, 10);
         scrollView.setLayoutParams(scrollParam);
-        scrollView.setBackgroundColor(Color.LTGRAY);
+        scrollView.setBackgroundColor(Color.GREEN);
         //HEADER
         RelativeLayout headerLayout = new RelativeLayout(context);
         headerLayout.setPadding(0, 0, 10, 10);
-        headerLayout.setBackgroundColor(Color.BLUE);
+        headerLayout.setBackground(Utilities.roundedShapeTB(20, 0, Color.LTGRAY));
         headerLayout.setOnTouchListener(motionListener());
         TextView headerText = new TextView(context);
         headerText.setTypeface(null, Typeface.BOLD);
-        headerText.setTextColor(Color.WHITE);
+        headerText.setTextColor(Color.BLUE);
         RelativeLayout.LayoutParams headerP = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
         headerP.addRule(RelativeLayout.CENTER_HORIZONTAL);
         headerText.setText("MODDED BY DAYONA");
         headerText.setLayoutParams(headerP);
+        headerText.setPadding(0, 10, 0, 10);
         headerLayout.addView(headerText);
         //MOD LAYOUT
         LinearLayout modLayout = new LinearLayout(context);
@@ -157,10 +160,10 @@ public class ModMenu {
         //MOD LIST
         LinearLayout modListLayout = new LinearLayout(context);
         modListLayout.setOrientation(LinearLayout.VERTICAL);
-        modListLayout.setPadding(0, 40, 0, 40);
+        modListLayout.setPadding(20, 40, 5, 40);
         //FOOTER
         RelativeLayout footerLayout = new RelativeLayout(context);
-        footerLayout.setBackgroundColor(Color.BLUE);
+        footerLayout.setBackground(Utilities.roundedShapeTB(0, 20, Color.LTGRAY));
         footerLayout.setPadding(30, 20, 30, 20);
         footerLayout.setOnTouchListener(motionListener());
         //KILL/HIDE BUTTON ITERATION
@@ -168,7 +171,7 @@ public class ModMenu {
             TextView btn = new TextView(context);
             btn.setText(i == 0 ? "KILL" : "HIDE");
             btn.setTypeface(null, Typeface.BOLD);
-            btn.setTextColor(Color.WHITE);
+            btn.setTextColor(Color.BLUE);
             RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
             btnParams.addRule(i == 0 ? RelativeLayout.ALIGN_START : RelativeLayout.ALIGN_PARENT_END);
             btn.setLayoutParams(btnParams);
@@ -218,7 +221,8 @@ public class ModMenu {
         iconLauncher.getLayoutParams().width = applyDimension;
         byte[] decode = Base64.decode(Start.base64Icon(), 0);
         iconLauncher.setScaleType(ImageView.ScaleType.FIT_XY);
-        iconLauncher.setImageBitmap(BitmapFactory.decodeByteArray(decode, 0, decode.length));
+        Bitmap bitmap = Utilities.roundCornerImage(BitmapFactory.decodeByteArray(decode, 0, decode.length), 40);
+        iconLauncher.setImageBitmap(bitmap);
         iconLauncher.setOnTouchListener(motionListener());
         icon.addView(iconLauncher);
     }
@@ -240,4 +244,5 @@ public class ModMenu {
             }
         };
     }
+
 }

@@ -58,7 +58,7 @@ public class ModUtilities {
         sw.setTextColor(Color.WHITE);
         sw.setWidth(500);
         sw.setTextSize(10);
-        sw.setPadding(10, 5, 0, 5);
+        sw.setPadding(0, 5, 0, 5);
         sw.setOnCheckedChangeListener((buttonView, isChecked) -> callback.onClick(modName, index, isChecked, null));
         linearLayout.addView(sw);
         return linearLayout;
@@ -94,7 +94,7 @@ public class ModUtilities {
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setLayoutParams(params);
-        linearLayout.setPadding(10, 5, 0, 5);
+        linearLayout.setPadding(0, 5, 0, 5);
         TextView textView = new TextView(context);
         textView.setText(modName);
         textView.setTextSize(10);
@@ -123,8 +123,5 @@ public class ModUtilities {
     }
 }
 
-interface ChangeCallback {
-    void onClick(String modName, int index, boolean switchState, String txtState);
-}
 
 
