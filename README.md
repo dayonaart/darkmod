@@ -1,5 +1,7 @@
 # **darkmod**
 
+### This mod has compiled with latest sdk
+
 ### Testing Game
 
 <img src='screenshot/khack.gif' width='150' height="300" alt="">
