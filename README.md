@@ -1,5 +1,12 @@
 # **darkmod**
 
+### READ BEFORE YOU GO
+
+Modding's legality varies from country to country. In the UK and US it isn't strictly illegal, as
+long as it doesn't infringe on a game's copyright – but to platforms and developers there can be a
+fine line between modding and hacking. In Japan, however, modding could lead to a fine or even a
+prison sentence.
+
 ### This mod has compiled with latest sdk
 
 ### Testing Game

@@ -14,13 +14,8 @@
 
 package gg.day.dark;
 
-import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
-import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity {
     @Override
