@@ -28,6 +28,8 @@ import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class ModUtilities {
 
     private final Context context;
@@ -40,7 +42,12 @@ public class ModUtilities {
     public LinearLayout registerSwitcher(String modName, int index, ChangeCallback callback) {
         LinearLayout linearLayout = new LinearLayout(context);
         Switch sw = new Switch(context);
-        ColorStateList swState = new ColorStateList(
+        String[] initialState = Start.readSettingList(context);
+        if (initialState != null) {
+            boolean swState = Objects.equals(initialState[index], "true");
+            sw.setChecked(swState);
+        }
+        ColorStateList colorStateList = new ColorStateList(
                 new int[][]{
                         new int[]{-android.R.attr.state_enabled},
                         new int[]{android.R.attr.state_checked},
@@ -52,14 +59,17 @@ public class ModUtilities {
                         Color.DKGRAY // OFF
                 }
         );
-        sw.getThumbDrawable().setTintList(swState);
-        sw.getTrackDrawable().setTintList(swState);
+        sw.getThumbDrawable().setTintList(colorStateList);
+        sw.getTrackDrawable().setTintList(colorStateList);
         sw.setText(modName);
         sw.setTextColor(Color.WHITE);
         sw.setWidth(500);
         sw.setTextSize(10);
         sw.setPadding(0, 5, 0, 5);
-        sw.setOnCheckedChangeListener((buttonView, isChecked) -> callback.onClick(modName, index, isChecked, null));
+        sw.setOnCheckedChangeListener((buttonView, state) -> {
+            callback.onClick(modName, index, state, null);
+            Start.saveSetting(context.getApplicationInfo().dataDir);
+        });
         linearLayout.addView(sw);
         return linearLayout;
     }

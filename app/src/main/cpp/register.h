@@ -16,6 +16,8 @@
 #include "unistd.h"
 #include "sstream"
 #include "constant.h"
+#include "utilities.h"
+#include "Games/station-manager.h"
 
 using namespace std;
 
@@ -82,6 +84,29 @@ void startService(JNIEnv *env, jobject ctx) {
     jmethodID startActivityMethodId = env->GetMethodID(native_context, "startService",
                                                        "(Landroid/content/Intent;)Landroid/content/ComponentName;");
     env->CallObjectMethod(ctx, startActivityMethodId, intent);
+}
+
+jstring readSetting(JNIEnv *env, jclass clazz, jstring path) {
+    string p = string(env->GetStringUTFChars(path, nullptr)) + "/mod_setting.txt";
+    string readSet = READ_FILE(p);
+    _unlimitedMoney = readSet.substr(0, readSet.find("_")) == "true";
+    _unlimitedCoin = readSet.substr(1, readSet.find("_")) == "true";
+    _unlimitedPoint = readSet.substr(2, readSet.find("_")) == "true";
+    _isCheatApk = readSet.substr(3, readSet.find("_")) == "true";
+    _isLandScapeMode = readSet.substr(4, readSet.find("_")) == "true";
+    return env->NewStringUTF(readSet.c_str());
+}
+
+void saveSetting(JNIEnv *env, jclass clazz, jstring path) {
+    string p = string(env->GetStringUTFChars(path, nullptr)) + "/mod_setting.txt";
+    string saveData[] = {boolToString(_unlimitedMoney), boolToString(_unlimitedCoin),
+                         boolToString(_unlimitedPoint),
+                         boolToString(_isCheatApk), boolToString(_isLandScapeMode)};
+    string temp;
+    for (int i = 0; i < sizeof(saveData) / sizeof(string); ++i) {
+        temp += saveData[i] + "_";
+    }
+    WRITE_FILE(p, temp);
 }
 
 #endif //DAYDARK_REGISTER_H

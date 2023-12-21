@@ -1,4 +1,21 @@
 # ninja log v5
-1	265	1703138306267833066	CMakeFiles/daydark.dir/Patching/Patch.cpp.o	479b0e1678d442a6
-0	353	1703138306352832215	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
-353	405	1703138306405831685	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+0	3	0	clean	32b271c3c1e5c8cd
+1	254	1703182423242402171	CMakeFiles/daydark.dir/Patching/Patch.cpp.o	479b0e1678d442a6
+0	349	1703182423334401169	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+349	401	1703182423387400593	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	326	1703182566053847914	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+326	377	1703182566108847315	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	323	1703182586093629815	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+324	376	1703182586149629206	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	341	1703182662073828508	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+341	393	1703182662128827974	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	330	1703182707505387244	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+330	386	1703182707562386691	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	351	1703182800505483960	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+351	407	1703182800564483387	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	323	1703182886564648091	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+323	377	1703182886619647557	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	340	1703182935511172687	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+340	392	1703182935565172163	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517
+1	325	1703183288005749006	CMakeFiles/daydark.dir/main.cpp.o	8848577f89ba4d95
+325	379	1703183288062748452	/home/dayona/AndroidStudioProjects/daydark/app/build/intermediates/cxx/Debug/1832614v/obj/armeabi-v7a/libdaydark.so	8bd19d2c8a583517

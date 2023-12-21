@@ -15,7 +15,6 @@
 package gg.day.dark;
 
 import android.content.Context;
-import android.widget.Toast;
 
 public class Start {
 
@@ -29,6 +28,11 @@ public class Start {
 
     public static native void createThread(Context context);
 
+    public static native void saveSetting(String path);
+
+    private static native String readSetting(String path);
+
+
     static {
         System.loadLibrary("daydark");
     }
@@ -37,8 +41,10 @@ public class Start {
         checkOverlayPermission(context);
     }
 
-    public static void showToast(Context context, String message) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    public static String[] readSettingList(Context context) {
+        if (readSetting(context.getApplicationInfo().dataDir).split("_").length == 1) {
+            return null;
+        }
+        return readSetting(context.getApplicationInfo().dataDir).split("_");
     }
-
 }

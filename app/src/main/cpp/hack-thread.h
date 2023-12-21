@@ -13,10 +13,6 @@
 #ifndef DAYDARK_HACK_THREAD_H
 #define DAYDARK_HACK_THREAD_H
 
-#include "Includes/Utils.h"
-#include <dobby.h>
-#include "Games/station-manager.h"
-
 bool hookInitialized = false;
 
 void *hack_thread(void *) {

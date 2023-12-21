@@ -5,11 +5,15 @@
 #ifndef DAYDARK_STATION_MANAGER_H
 #define DAYDARK_STATION_MANAGER_H
 
-bool _unlimitedMoney;
-bool _unlimitedCoin;
-bool _unlimitedPoint;
-bool _isCheatApk;
-bool _isLandScapeMode;
+#include "Includes/Utils.h"
+#include "dobby.h"
+
+bool _unlimitedMoney = false;
+bool _unlimitedCoin = false;
+bool _unlimitedPoint = false;
+bool _isCheatApk = false;
+bool _isLandScapeMode = false;
+
 
 long long (*oldGetMoney)(void *instance);
 

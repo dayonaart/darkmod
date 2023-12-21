@@ -8,6 +8,8 @@
 #include "dirent.h"
 #include "sys/stat.h"
 
+using namespace std;
+
 void LSDIR(string dir) {
     struct dirent *d;
     DIR *openDir;
@@ -53,6 +55,13 @@ void MKDIR(string dirName) {
     } else {
         LOGD("CANNOT CREATE DIRECTORY");
     }
+}
+
+string boolToString(bool b) {
+    stringstream converter;
+    converter << boolalpha
+              << b;
+    return converter.str();
 }
 
 #endif //DAYDARK_UTILITIES_H

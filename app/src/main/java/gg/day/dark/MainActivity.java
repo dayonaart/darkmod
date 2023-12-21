@@ -18,6 +18,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 public class MainActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,9 @@ public class MainActivity extends Activity {
 //        params.addRule(RelativeLayout.CENTER_IN_PARENT);
 //        button.setLayoutParams(params);
 //        button.setText("TEST");
-//        button.setOnClickListener(v -> Start.Mod(this));
+//        button.setOnClickListener(v -> {
+//
+//        });
 //        relativeLayout.addView(button);
 //        setContentView(relativeLayout);
         Start.Mod(this);

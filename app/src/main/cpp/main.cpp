@@ -16,7 +16,6 @@
 #include "Includes/Logger.h"
 #include "register.h"
 #include "hack-thread.h"
-#include "Includes/Utils.h"
 #include "utilities.h"
 
 
@@ -36,14 +35,17 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     if (c == nullptr) return JNI_ERR;
     static const JNINativeMethod methods[] = {
             {"checkOverlayPermission", "(Landroid/content/Context;)V",
-                                                                reinterpret_cast<void *>(checkOverlayPermission)},
+                                                                                 reinterpret_cast<void *>(checkOverlayPermission)},
             {"changeState",            "(Ljava/lang/String;IZLjava/lang/String;)V",
-                                                                reinterpret_cast<void *>(changeStateStationManager)},
-            {"base64Icon",             "()Ljava/lang/String;",  reinterpret_cast<void *>(icon)},
+                                                                                 reinterpret_cast<void *>(changeStateStationManager)},
+            {"base64Icon",             "()Ljava/lang/String;",                   reinterpret_cast<void *>(icon)},
             {"getListMenu",
-                                       "()[Ljava/lang/String;", reinterpret_cast<void *>(getFeatureListStationManager)},
+                                       "()[Ljava/lang/String;",                  reinterpret_cast<void *>(getFeatureListStationManager)},
             {"createThread",           "(Landroid/content/Context;)V",
-                                                                reinterpret_cast<void *>(createThread)},
+                                                                                 reinterpret_cast<void *>(createThread)},
+            {"saveSetting",            "(Ljava/lang/String;)V",                  reinterpret_cast<void *>(saveSetting)},
+            {"readSetting",            "(Ljava/lang/String;)Ljava/lang/String;", reinterpret_cast<void *>(readSetting)}
+
     };
     int rc = env->RegisterNatives(c, methods, sizeof(methods) / sizeof(JNINativeMethod));
     if (rc != JNI_OK) return rc;
